@@ -99,6 +99,12 @@
     "preact": "^10.28.2",
     "rimraf": "^6.1.2",
     "sass": "^1.97.2",
+    "tinacms": "^2.0.0.",
+    "@tinacmd/cli": "^2.0.0",
+
+
+
+    
     "simple-icons": "^16.4.0",
     "stylelint": "^16.26.1",
     "stylelint-config-recess-order": "5.1.1",
