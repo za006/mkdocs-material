@@ -43,6 +43,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+
+
+
+
       - name: Set up Node.js runtime
         uses: actions/setup-node@v5
         with:
@@ -63,6 +67,15 @@ jobs:
         run: |
           npm run build
           git diff --name-only
+
+
+      - name: Build TinaCMS Content
+        run: npm run build:tina
+        env:
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+
+
 
   npm-check:
     runs-on: ubuntu-latest
