@@ -74,6 +74,15 @@ jobs:
         run: npm install
 
 
+      - name: Ensure Tina Configuration
+        run: |
+         if: [ -d ".tina" ]; then
+          echo "Tina configuration found. Proceeding with build..."
+         else
+          echo "Tina configuration missing. Running initialization..."
+          npx @tina/cli@latest init -y
+         fi
+
       - name: Build TinaCMS Content
         run: npx tinacms build
         env:
