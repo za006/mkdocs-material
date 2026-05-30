@@ -69,6 +69,10 @@ jobs:
           git diff --name-only
 
 
+      - name: Install dependencies
+        run: npm install
+
+
       - name: Build TinaCMS Content
         run: npm run build:tina
         env:
