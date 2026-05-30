@@ -25,9 +25,11 @@
   },
   "scripts": {
     "build": "rimraf material && ts-node -T tools/build --optimize",
+
+    "tina": "tinacms",
     "build:tina": "tinacms build",
-
-
+    "dev:tina": "tinacms dev",
+    "start:tina": "tinacms dev",
 
     
     "build:all": "rimraf material && ts-node -T tools/build --all --optimize",
